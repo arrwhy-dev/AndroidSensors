@@ -13,10 +13,14 @@ public class MainActivity extends Activity
 
 	public static LinearLayout layout;
 	public static ContextWrapper context;
+	
 
 	@Override
 	public void onCreate(Bundle savedInstanceState)
 	{
+		int width = getWindowManager().getDefaultDisplay().getWidth();
+		int height = getWindowManager().getDefaultDisplay().getHeight();
+		
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
@@ -28,7 +32,7 @@ public class MainActivity extends Activity
 				.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
 
 		AccelerometerSensorEventListener accelerometerListener = new AccelerometerSensorEventListener(
-				getApplicationContext(), layout);
+				getApplicationContext(), layout,width,height);
 
 		
 		sensorManager.registerListener(accelerometerListener, accelerometer,SensorManager.SENSOR_DELAY_NORMAL);

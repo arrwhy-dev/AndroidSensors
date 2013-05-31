@@ -33,7 +33,8 @@ import android.view.View;
  * configurable, but it assumes each sample is happening at a constant
  * frequency.
  * 
- * @author Kirill
+ * @original author Kirill
+ * @Modified by Rushan Yogaratnam
  * 
  */
 public class LineGraphView extends View
@@ -47,8 +48,8 @@ public class LineGraphView extends View
 
 	private Paint graphPaint = new Paint();
 
-	private final int WIDTH = 400;
-	private final int HEIGHT = 400;
+	private final int WIDTH = 1000;
+	private final int HEIGHT = 1000;
 	private final int AXIS_WIDTH = 100;
 
 	private float xScale, yScale;
@@ -76,6 +77,7 @@ public class LineGraphView extends View
 
 		maxDataWidth = dataWidth;
 		this.labels = labels;
+		
 
 		setColors(defalutColors);
 	}
