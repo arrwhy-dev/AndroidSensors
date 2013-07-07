@@ -21,13 +21,12 @@ package ca.uwaterloo.sensortoy;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.androidsensors.MainActivity;
-
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.view.View;
+
+import com.ryogarat.androidsensors.MainActivity;
 
 /**
  * A simple implementation of a line graph widget. The x axis is not user
@@ -48,7 +47,7 @@ public class LineGraphView extends View
 			0xff000000, 0xffffff00, 0xffff00ff, 0xff00ffff, };
 
 	private Paint graphPaint = new Paint();
-
+	
 	private final int WIDTH = MainActivity.getDisplayWidth();
 	private final int HEIGHT =  (int) (MainActivity.getDisplayWidth() * 0.8);
 	private final int AXIS_WIDTH = 100;

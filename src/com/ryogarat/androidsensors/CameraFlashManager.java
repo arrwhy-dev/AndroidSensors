@@ -1,4 +1,4 @@
-package com.example.androidsensors;
+package com.ryogarat.androidsensors;
 
 import android.content.Context;
 import android.content.pm.PackageManager;

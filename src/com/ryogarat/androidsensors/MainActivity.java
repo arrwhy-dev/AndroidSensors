@@ -1,4 +1,4 @@
-package com.example.androidsensors;
+package com.ryogarat.androidsensors;
 
 import android.app.Activity;
 import android.hardware.Sensor;

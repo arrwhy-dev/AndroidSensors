@@ -13,7 +13,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.androidsensors.MainActivity"
+            android:name="com.ryogarat.androidsensors.MainActivity"
             android:label="@string/launcherTitle"
             android:screenOrientation="portrait" >
             <intent-filter>
@@ -23,11 +23,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.androidsensors.BarometerActivity"
+            android:name="com.ryogarat.androidsensors.BarometerActivity"
             android:label="@string/title_activity_sensor" >
         </activity>
         <activity
-            android:name="com.example.androidsensors.TemperatureActivity"
+            android:name="com.ryogarat.androidsensors.TemperatureActivity"
             android:label="@string/title_activity_temperature" />
     </application>
 

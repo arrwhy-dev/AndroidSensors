@@ -1,4 +1,4 @@
-package com.example.androidsensors;
+package com.ryogarat.androidsensors;
 
 import java.util.Arrays;
 
