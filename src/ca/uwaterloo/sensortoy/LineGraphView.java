@@ -19,13 +19,14 @@
 package ca.uwaterloo.sensortoy;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
+import com.example.androidsensors.MainActivity;
+
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
-import android.util.Pair;
 import android.view.View;
 
 /**
@@ -34,7 +35,7 @@ import android.view.View;
  * frequency.
  * 
  * @original author Kirill
- * @Modified by Rushan Yogaratnam
+ * @Modified by Rushan Yogaratnam   
  * 
  */
 public class LineGraphView extends View
@@ -48,8 +49,8 @@ public class LineGraphView extends View
 
 	private Paint graphPaint = new Paint();
 
-	private final int WIDTH = 1000;
-	private final int HEIGHT = 1000;
+	private final int WIDTH = MainActivity.getDisplayWidth();
+	private final int HEIGHT =  (int) (MainActivity.getDisplayWidth() * 0.8);
 	private final int AXIS_WIDTH = 100;
 
 	private float xScale, yScale;
@@ -161,7 +162,7 @@ public class LineGraphView extends View
 		graphSrcY = HEIGHT - (rawSrc * yScale + (HEIGHT / 2));
 		graphDestX = (count) * xScale + AXIS_WIDTH;
 		graphDestY = HEIGHT - (rawDest * yScale + (HEIGHT / 2));
-
+		paint.setStrokeWidth((float) 3);
 		canvas.drawLine(graphSrcX, graphSrcY, graphDestX, graphDestY, paint);
 	}
 

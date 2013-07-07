@@ -12,15 +12,16 @@ import android.widget.TextView;
 public class GenericSensorListener implements SensorEventListener
 {
 
-	protected TextView tv;
-	protected String SensorName = "";
+	private TextView tv;
+	private String SensorName = "";
 
-	double xValueHigh = 0;
-	double yValueHigh = 0;
-	double zValueHigh = 0;
-	double lightSensorHigh = 0;
+	private double xValueHigh = 0;
+	private double yValueHigh = 0;
+	private double zValueHigh = 0;
+	private double lightSensorHigh = 0;
 
-	public void onAccuracyChanged(Sensor sensor, int accuracy){}
+	public void onAccuracyChanged(Sensor sensor, int accuracy)
+	{}
 
 	public void onSensorChanged(SensorEvent se)
 	{
@@ -47,23 +48,30 @@ public class GenericSensorListener implements SensorEventListener
 				zValueHigh = Math.abs(z);
 			}
 			String values = String.format("(%.4f, %.4f, %.4f)", x, y, z);
-			String highValues =String.format("(%.4f, %.4f, %.4f)", xValueHigh, yValueHigh, zValueHigh);
-			
-			tv.setText(SensorName+": " + values + "\n  High:" +highValues);
+			String highValues = String.format("(%.4f, %.4f, %.4f)", xValueHigh,
+					yValueHigh, zValueHigh);
+
+			tv.setText(SensorName + ": " + values + "\n  High:" + highValues);
 
 		}
 		else if (se.sensor.getType() == Sensor.TYPE_LIGHT)
 		{
-			
 
 			if (lightSensorHigh < Math.abs(se.values[0]))
 			{
 				lightSensorHigh = Math.abs(se.values[0]);
 			}
 			String value = String.format("%.4f", se.values[0]);
-			String highValue=String.format("%.4f", lightSensorHigh);
+			String highValue = String.format("%.4f", lightSensorHigh);
 
-			tv.setText(SensorName+": " + value + "\n High: " + highValue);
+			tv.setText(SensorName + ": " + value + "\n High: " + highValue);
+
+		}
+
+		else if (se.sensor.getType() == Sensor.TYPE_AMBIENT_TEMPERATURE || se.sensor.getType()==Sensor.TYPE_PRESSURE)
+		{
+			String value = String.format("%.4f", se.values[0]);
+			tv.setText(SensorName + ": " + value);
 
 		}
 

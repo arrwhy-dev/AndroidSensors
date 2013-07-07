@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.example.androidsensors;
+package com.ryogarat.androidsensors;
 
 public final class R {
     public static final class attr {
@@ -28,15 +28,18 @@ public final class R {
         public static final int icon=0x7f020002;
     }
     public static final class id {
-        public static final int action_settings=0x7f080004;
+        public static final int action_settings=0x7f080006;
+        public static final int button1=0x7f080003;
         public static final int layout1=0x7f080001;
-        public static final int menu_settings=0x7f080003;
+        public static final int menu_settings=0x7f080005;
         public static final int scroll=0x7f080000;
         public static final int textview1=0x7f080002;
+        public static final int textview2=0x7f080004;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
         public static final int activity_sensor=0x7f030001;
+        public static final int activity_temperature=0x7f030002;
     }
     public static final class menu {
         public static final int activity_main=0x7f070000;
@@ -50,6 +53,7 @@ public final class R {
         public static final int menu_settings=0x7f050002;
         public static final int title_activity_main=0x7f050003;
         public static final int title_activity_sensor=0x7f050005;
+        public static final int title_activity_temperature=0x7f050007;
     }
     public static final class style {
         public static final int AppTheme=0x7f060000;

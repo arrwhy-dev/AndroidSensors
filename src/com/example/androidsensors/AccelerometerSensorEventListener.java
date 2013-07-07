@@ -20,16 +20,16 @@ public class AccelerometerSensorEventListener extends GenericSensorListener
 
 	}
 
-	public AccelerometerSensorEventListener(Context context, LinearLayout layout,int  width ,int height)
+	public AccelerometerSensorEventListener(Context context, LinearLayout layout)
 	{
-		super(context,"Accelerometer");
+		super(context,SensorStringResources.ACCELEROMETER);
 	     graph = new LineGraphView(context, 100, Arrays.asList("x", "y", "z"));
 	     
 		layout.addView(graph);
 		graph.setVisibility(View.VISIBLE);
-		
-		graph.getLayoutParams().width= width;
-		graph.getLayoutParams().height=height;
+//		
+//		graph.getLayoutParams().width= width;
+//		graph.getLayoutParams().height=height/3;
 
 	}
 
